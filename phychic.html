@@ -26,7 +26,7 @@
         var guesses = 9;
         var guessesLeft = 9;
         var userGuessArray = [];
-    // ---------------------setup section------------------------------------
+    // --------------------need to allow user 9 guesses------------------------------------
 
 
 
@@ -73,7 +73,8 @@
           "<p>The computer chose: " + computerGuess + "</p>" +
           "<p>wins: " + wins + "</p>" +
           "<p>losses: " + losses + "</p>" +
-          "<p>Guesses Left: " + guessesLeft + "</p>";
+          "<p>Guesses Left: " + guessesLeft + "</p>" +
+          "<p>Your guesses so far: " + guesses + "</p>";
 
         // Set the inner HTML contents of the #game div to our html string
         document.querySelector("#game").innerHTML = html;
