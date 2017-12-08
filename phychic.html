@@ -20,11 +20,15 @@
     // Creating global variables to hold the number of wins, losses. They start at 0. also a downward counter for guesses left
         var wins = 0;
         var losses = 0;
+        var guesses = 9;
         var guessesLeft = 9;
+
         var userGuessArray = [];
+    // ---------------------setup section------------------------------------
 
-        console.log(userGuessArray.length);
 
+
+    //----------------------onkeyup section----------------------------------
     // This function is run whenever the user presses a key.
     document.onkeyup = function(event) {
 
@@ -34,7 +38,7 @@
       //   var multiGuess = function l() {
       //    for(var i = 0; i < 9; i++) {
       //    userGuessArray.push(userGuess);
-      //   }
+      //   }]
       // }
       //    return userGuess;
 
