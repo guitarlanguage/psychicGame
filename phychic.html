@@ -17,7 +17,7 @@
     // Creates an array that lists out all of the options that the  computer could use.
     var computerChoices = ["a", "b", "c", "d", "e","f", "g", "h", "i", "j", "k", "l", "m",
     "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    // Creating variables to hold the number of wins, losses. They start at 0. also a downward counter for guesses left
+    // Creating global variables to hold the number of wins, losses. They start at 0. also a downward counter for guesses left
         var wins = 0;
         var losses = 0;
         var guessesLeft = 9;
@@ -30,17 +30,13 @@
 
       // Determines which key was pressed.
 
-      for(var i = 0; i < 9; i++) {
         var userGuess = event.key;
-        userGuessArray.push(userGuess);
-
+      //   var multiGuess = function l() {
+      //    for(var i = 0; i < 9; i++) {
+      //    userGuessArray.push(userGuess);
+      //   }
+      // }
       //    return userGuess;
-      }
-
-
-
-
-
 
       // Randomly chooses a choice from the computerChoice array. This is the Computer's guess.
       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
@@ -48,9 +44,9 @@
       // Reworked our code from last step to use "else if" instead of lots of if statements.
 
       // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
-      for (var j = 0; j < array.length; j++) {
-          return userGuessArray;
-      }
+      // for (var j = 0; j < array.length; j++) {
+      //     return userGuessArray;
+      // }
       if(userGuess === computerGuess) {
           wins++;
           guessesLeft--;
