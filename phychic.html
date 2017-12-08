@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Phychic Genie</title>
+</head>
+
+<body>
+
+  <div id="game">
+    <p>Guess what letter I am thinking of</p><br>
+  </div>
+
+
+  <script type="text/javascript">
+    // Creates an array that lists out all of the options that the  computer could use.
+    var computerChoices = ["a", "b", "c", "d", "e","f", "g", "h", "i", "j", "k", "l", "m",
+    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    // Creating variables to hold the number of wins, losses. They start at 0. also a downward counter for guesses left
+        var wins = 0;
+        var losses = 0;
+        var guessesLeft = 9;
+        var userGuessArray = [];
+
+        console.log(userGuessArray.length);
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+
+      for(var i = 0; i < 9; i++) {
+        var userGuess = event.key;
+        userGuessArray.push(userGuess);
+
+      //    return userGuess;
+      }
+
+
+
+
+
+
+      // Randomly chooses a choice from the computerChoice array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      // Reworked our code from last step to use "else if" instead of lots of if statements.
+
+      // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
+      for (var j = 0; j < array.length; j++) {
+          return userGuessArray;
+      }
+      if(userGuess === computerGuess) {
+          wins++;
+          guessesLeft--;
+        } else if (userGuess !== computerGuess) {
+          losses++;
+          guessesLeft--;
+        }
+
+
+      if(guessesLeft === 0) {
+        document.write("Game Over");
+      }
+
+
+
+
+        // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
+        var html =
+          "<p>You chose: " + userGuess + "</p>" +
+          "<p>The computer chose: " + computerGuess + "</p>" +
+          "<p>wins: " + wins + "</p>" +
+          "<p>losses: " + losses + "</p>" +
+          "<p>Guesses Left: " + guessesLeft + "</p>";
+
+        // Set the inner HTML contents of the #game div to our html string
+        document.querySelector("#game").innerHTML = html;
+
+    };
+  </script>
+
+</body>
+
+</html>
+<!-- <p>Wins: </p><br>
+<p>Guess what letter I am thinking of</p><br>
+<p>Guess what letter I am thinking of</p><br> -->
+
+<!-- var array = [" ", " ", " ", " ", " ", " "," ", " "]; -->
+
+<!-- //creating a function for guessesLeft that loops from 10 to 0
+  var guessesLeft() {
+   for(var i = 10; i > 0; i){
+     document.write("Guesses Left: " + i);
+   }
+ } -->
+
+ <!-- //  for(var i = 0; i < 9; i++) {
+ //    return userGuess;
+ //  }
+
+  // var userGuess2 = event.key;
+  // var userGuess3 = event.key;
+  // var userGuess4 = event.key;
+  // var userGuess5 = event.key; -->
+
+
+ <!-- 1 || userGuess2 || userGuess3 || userGuess4 || userGuess5  -->
