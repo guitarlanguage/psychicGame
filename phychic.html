@@ -24,7 +24,7 @@
         var wins = 0;
         var losses = 0;
         var guessesLeft = 9;
-
+        var guesses;
         var guessedLetters = [];
         var lettersToGuess = null;
 
@@ -44,7 +44,7 @@
       // wins = 0;
       // losses = 0;
       guessesLeft = 9;
-    
+
       guessedLetters = [];
     }
     //----------------------onkeyup section----------------------------------
@@ -52,10 +52,19 @@
     document.onkeyup = function(event) {
 
       guessesLeft--;
+      // Captures the key press, converts it to lowercase, and saves it to a variable.
+      var letter = String.fromCharCode(event.keyCode).toLowerCase();
+      var userGuess = event.key;
+      var usersGuessHolder = function() {
 
+      for(var i = 0; i < 9; i++) {
+      guessedLetters.push(guesses);
+      console.log(guesses);
+      }
+    }
       // Determines which key was pressed.
 
-        var userGuess = event.key;
+
       //   var multiGuess = function l() {
       //    for(var i = 0; i < 9; i++) {
       //    userGuessArray.push(userGuess);
