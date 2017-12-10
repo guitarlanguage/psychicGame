@@ -53,13 +53,13 @@
 
       guessesLeft--;
       // Captures the key press, converts it to lowercase, and saves it to a variable.
-      var letter = String.fromCharCode(event.keyCode).toLowerCase();
-      var userGuess = event.key;
+      var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
       var usersGuessHolder = function() {
 
       for(var i = 0; i < 9; i++) {
-      guessedLetters.push(guesses);
-      console.log(guesses);
+      guessedLetters.push(userGuess);
+      console.log(userGuess);
       }
     }
       // Determines which key was pressed.
@@ -82,7 +82,7 @@
           // guessesLeft--;
         } else if (userGuess !== computerGuess) {
           losses++;
-          guessesLeft--;
+
         }
 
 
