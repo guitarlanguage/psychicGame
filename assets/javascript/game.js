@@ -31,7 +31,7 @@
 
   var updateGuessesSoFar = function() {
     //display the letters that the user has tried
-    document.querySelector("#sofar").innerText = "Your Guesses so far: " + guessedLetters.join(', ');
+    document.querySelector("#sofar").innerHTML = "Your Guesses so far: " + guessedLetters.join(', ');
   };
 
 
@@ -43,7 +43,14 @@
     guessesLeft = 9;
     totalGuesses = 9;
     guessedLetters = [];
+
+    updateChancesLeft();
+    updateGuessesSoFar();
+    updateLettersToGuess();
   }
+
+  updateLettersToGuess();
+  updateChancesLeft();
   //----------------------onkeyup section----------------------------------
   // This function is run whenever the user presses a key.
   document.onkeyup = function(event) {
