@@ -1,0 +1,15 @@
+/*p {
+  margin-left: 20px;
+}*/
+body {
+  background-image: url("../images/footer_lodyas.png");
+  /*background-image: url("footer_lodyas.png");*/
+  color: white;
+
+}
+
+img {
+  padding:15px;
+}
+
+  /*background-repeat: no-repeat;*/

@@ -9,24 +9,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-  </head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <body>
     <div id="game">
       <header>
-        <h1>Genie Psychic game</h1>
+        <h1 class="text-center">Genie Psychic game</h1>
       </header>
-      <p>Guess what letter I am thinking of</p><br>
-      <ul>
-        <li><p id="wins">Wins: </p></li>
-        <li><p id="losses">Losses: </p></li>
-        <li><p id="guessesLeft">Guesses Left: </p></li>
-        <li><p id="sofar">Your guesses so far: </p></li>
-
-      </ul>
+      <p class="text-center">Guess what letter I am thinking of</p><br>
+      <div class="row">
+        <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4">
+        <ul class="text-left">
+          <li><p id="wins">Wins: </p></li>
+          <li><p id="losses">Losses: </p></li>
+          <li><p id="guessesLeft">Guesses Left: </p></li>
+          <li><p id="sofar">Your guesses so far: </p></li>
+       </ul>
+    </div>
+    <div class="col-sm-4">
+      <img src="assets/images/magic-24293_1280.png" width="100%">
+  </div>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript" src="assets/javasript/game.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
   </body>
 </html>
